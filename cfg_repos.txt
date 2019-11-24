@@ -1,0 +1,3 @@
+# line format: repository on TSD <tab> repository on GitHub
+floriakr/tsdtools	git@github.com:precimed/tsdtools.git
+floriakr/noda	git@github.com:precimed/noda.git
