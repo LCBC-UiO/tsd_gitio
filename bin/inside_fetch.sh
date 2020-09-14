@@ -5,9 +5,6 @@ set -ETeuo pipefail
 
 declare BASEDIR; BASEDIR="$( cd "$( dirname $0 )" && pwd )"; readonly BASEDIR
 
-source ${BASEDIR}/cfg.txt
-
-
 cd "${BASEDIR}"
 # get all repos
 while read tsd_repos github_repos; do
@@ -15,7 +12,7 @@ while read tsd_repos github_repos; do
   gdir=${tsd_repos##*/}
   if [ ! -d ${gdir} ]; then
     printf "cloning ${github_repos} (${gdir})\n"
-    git clone ${github_repos} ${gdir}
+    git clone ${tsd_repos} ${gdir}
   fi
   (
     cd ${gdir}
@@ -26,11 +23,15 @@ while read tsd_repos github_repos; do
 done < <( cat ${BASEDIR}/cfg_repos.txt | grep -v "^#")
 
 cd /tmp
+project=${USER%-*}
 
 # make output file
 md5str=$(find ${BASEDIR} -type f | xargs cat | md5sum)
-fn_out_tgz="gitio_${TSD_PROJECT}_$(date +"%y%m%d-%H")_${md5str:0:7}.tar.gz"
+fn_out_tgz="gitio_${project}_$(date +"%y%m%d-%H")_${md5str:0:7}.tar.gz"
 tar cfz ${fn_out_tgz} -C ${BASEDIR}/.. ${BASEDIR##*/}
 
-printf "\ncreated: /tmp/${fn_out_tgz}  (upload to TSD; extract; run ./inside_push)\n\n"
+fn_exp=/tsd/p33/data/durable/file-export/${fn_out_tgz}
+mv ${fn_out_tgz} ${fn_exp} 
+
+printf "\ncreated: ${fn_exp}  (export from TSD; extract; run ./outside_push)\n\n"
 
