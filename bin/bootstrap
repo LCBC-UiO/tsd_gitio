@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -ETeuo pipefail
+
+declare BASEDIR; BASEDIR="$( cd "$( dirname $0 )/.." && pwd )"; readonly BASEDIR
+
+usage() {
+cat << EOI
+$(basename $0) <path>
+
+Create a new gitio directoy.
+EOI
+}
+
+# check arg1
+
+# create a new directory 
+mkdir "$1"
+
+cd "$1" 
+
+git clone "${BASEDIR}" .gitio
+
+cp .gitio/cfg_repos_example.txt cfg_repos.txt
+ln -s .gitio/bin/push.sh push_outside
