@@ -22,4 +22,12 @@ cd "$1"
 git clone "${BASEDIR}" .gitio
 
 cp .gitio/cfg_repos_example.txt cfg_repos.txt
-ln -s .gitio/bin/push.sh push_outside
+cp .gitio/cfg_example.txt cfg.txt
+ln -s .gitio/bin/push.sh outside_push
+ln -s .gitio/bin/push.sh inside_push
+ln -s .gitio/bin/outside_fetch.sh outside_fetch
+ln -s .gitio/bin/inside_fetch.sh inside_fetch
+
+
+printf "\ncreated: $1\n"
+printf "\nedit cfg.txt and cfg_repos.txt and run ./outside_fetch or ./inside_fetch\n"
