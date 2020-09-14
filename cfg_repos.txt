@@ -1,9 +1,0 @@
-# line format: repository on TSD <tab> repository on GitHub
-floriakr/dc_reports	git@github.com:LCBC-UiO/tsd_datacollection_reports
-floriakr/mirrortracing_qc	git@github.com:LCBC-UiO/mirrortracing_qc
-floriakr/moasdb	git@github.com:LCBC-UiO/moasdb
-floriakr/nettquik	git@github.com:LCBC-UiO/nettquik
-floriakr/tuls	git@github.com:LCBC-UiO/tuls
-floriakr/upload_viewer	git@github.com:LCBC-UiO/upload_viewer
-floriakr/upview_p23	git@github.com:LCBC-UiO/tsd_upload_viewer_p23.git
-LCBC/tuls_cfg_p23	git@github.com:LCBC-UiO/tsd_tuls_cfg_p23.git
