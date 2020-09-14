@@ -20,8 +20,7 @@ while read tsd_repos github_repos; do
   (
     cd ${gdir}
     git remote set-url origin_github ${github_repos} 2>/dev/null || git remote add origin_github ${github_repos}
-    origin_tsd=${tsd_repos}
-    git remote set-url origin_tsd ${origin_tsd} 2>/dev/null || git remote add origin_tsd ${origin_tsd}
+    git remote set-url origin_tsd ${tsd_repos} 2>/dev/null || git remote add origin_tsd ${tsd_repos}
   )
 done < <( cat ${BASEDIR}/cfg_repos.txt | grep -v "^#")
 

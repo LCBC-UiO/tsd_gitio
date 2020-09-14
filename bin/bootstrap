@@ -27,6 +27,7 @@ ln -s .gitio/lib/push.sh outside_push
 ln -s .gitio/lib/push.sh inside_push
 ln -s .gitio/lib/outside_fetch.sh outside_fetch
 ln -s .gitio/lib/inside_fetch.sh inside_fetch
+ln -s .gitio/lib/update_origins.sh update
 
 
 printf "\ncreated: $1\n"
