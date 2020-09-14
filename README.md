@@ -7,7 +7,7 @@ This tool helps you syncing your repos by pulling all of them and creating a sin
 
 ### Init (only once)
 
-Clone this repo and run bootstrap
+Clone this repo and run init
 ```
 git clone https://github.com/LCBC-UiO/tsd_gitio
 tsd_gitio/bin/init gitio_p23
