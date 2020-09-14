@@ -1,2 +1,3 @@
-TSD_GIT_SERVER=http://p33-rhel7-hpc:3000
+TSD_GIT_SERVER=http://p23-services:3000
+TSD_PROJECT=p23
 

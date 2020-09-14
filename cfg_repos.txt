@@ -1,5 +1,9 @@
 # line format: repository on TSD <tab> repository on GitHub
-floriakr/noda	git@github.com:precimed/noda.git
-floriakr/tsdtools	git@github.com:precimed/tsdtools.git
-floriakr/phendap	git@github.com:precimed/phendap.git
-franbe/services	git@github.com:precimed/tsd_services.git
+floriakr/dc_reports	git@github.com:LCBC-UiO/tsd_datacollection_reports
+floriakr/mirrortracing_qc	git@github.com:LCBC-UiO/mirrortracing_qc
+floriakr/moasdb	git@github.com:LCBC-UiO/moasdb
+floriakr/nettquik	git@github.com:LCBC-UiO/nettquik
+floriakr/tuls	git@github.com:LCBC-UiO/tuls
+floriakr/upload_viewer	git@github.com:LCBC-UiO/upload_viewer
+floriakr/upview_p23	git@github.com:LCBC-UiO/tsd_upload_viewer_p23.git
+LCBC/tuls_cfg_p23	git@github.com:LCBC-UiO/tsd_tuls_cfg_p23.git
