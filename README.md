@@ -24,7 +24,7 @@ where `gitio_p23` is the name of a new folder that you want to use.
   * upload the archive to TSD
   * inside TSD: extract and run `inside_push`
   
-### Exporting form TSD
+### Exporting from TSD
   * inside TSD: run `inside_fetch`
   * export the archive from TSD
   * outside TSD: extract and run `outside_push`
