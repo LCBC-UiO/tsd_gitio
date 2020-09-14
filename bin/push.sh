@@ -20,5 +20,5 @@ cd ${BASEDIR}
 #list dirs
 for dir in $(ls -d */); do
   echo ${dir}...
-  cd ${BASEDIR}/${dir} && git pull ${origin} && git push ${origin}
+  cd ${BASEDIR}/${dir} && git pull ${origin} master && git push ${origin}
 done
