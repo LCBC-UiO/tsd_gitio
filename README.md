@@ -16,7 +16,7 @@ where `gitio_p23` is the name of a new folder that you want to use.
 
 ### Config (only once)
 
-`cd gitio_p23` and edit `cfg.txt` and `cfg_repos.txt`. The latter contains the git URLs inside and outside TSD for all repos
+`cd gitio_p23` and edit `cfg.txt` and `cfg_repos.txt`. The latter contains both git URLs (inside and outside TSD) for all repos.
 
 ### Importing to TSD
 
@@ -24,7 +24,7 @@ where `gitio_p23` is the name of a new folder that you want to use.
   * upload the archive to TSD
   * inside TSD: extract and run `inside_push`
   
-### Exporting to TSD
+### Exporting form TSD
   * inside TSD: run `inside_fetch`
   * export the archive from TSD
   * outside TSD: extract and run `outside_push`
