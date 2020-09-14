@@ -1,6 +1,6 @@
 # TSD GitIO
 
-Transfering a lot of repos into/from TSD? Can't keep track where your latest code is? \ 
+Transfering a lot of repos into/from TSD? Can't keep track where your latest code is?  
 This tool helps you sycing your repos by pulling all of them and creating a single archive for easy upload/download.
 
 ## Quick start
