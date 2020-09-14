@@ -23,10 +23,10 @@ git clone "${BASEDIR}" .gitio
 
 cp .gitio/cfg_repos_example.txt cfg_repos.txt
 cp .gitio/cfg_example.txt cfg.txt
-ln -s .gitio/bin/push.sh outside_push
-ln -s .gitio/bin/push.sh inside_push
-ln -s .gitio/bin/outside_fetch.sh outside_fetch
-ln -s .gitio/bin/inside_fetch.sh inside_fetch
+ln -s .gitio/lib/push.sh outside_push
+ln -s .gitio/lib/push.sh inside_push
+ln -s .gitio/lib/outside_fetch.sh outside_fetch
+ln -s .gitio/lib/inside_fetch.sh inside_fetch
 
 
 printf "\ncreated: $1\n"
