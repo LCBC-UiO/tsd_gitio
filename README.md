@@ -36,4 +36,4 @@ If you want to change the location of a repository after the init.
   * edit `cfg_repos.txt`
   * run `update`
 
-(Folders are derived from the "inside" URLs, so you might have to rename the folders accordingly.)
+(Folder names are derived from the "inside" URLs, so you might have to rename the folders accordingly.)
