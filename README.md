@@ -33,5 +33,7 @@ where `gitio_p23` is the name of a new folder that you want to use.
 
 If you want to change the location of a repository after the init.
 
-  * edit `config_repos.txt`
+  * edit `cfg_repos.txt`
   * run `update`
+
+(Folders are derived from the "inside" URLs, so you might have to rename the folders accordingly.)
