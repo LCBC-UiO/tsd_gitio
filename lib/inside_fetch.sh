@@ -30,7 +30,7 @@ md5str=$(find ${BASEDIR} -type f | xargs cat | md5sum)
 fn_out_tgz="gitio_${project}_$(date +"%y%m%d-%H")_${md5str:0:7}.tar.gz"
 tar cfz ${fn_out_tgz} -C ${BASEDIR}/.. ${BASEDIR##*/}
 
-fn_exp=/tsd/p33/data/durable/file-export/${fn_out_tgz}
+fn_exp=/tsd/${project}/data/durable/file-export/${fn_out_tgz}
 mv ${fn_out_tgz} ${fn_exp} 
 
 printf "\ncreated: ${fn_exp}  (export from TSD; extract; run ./outside_push)\n\n"
