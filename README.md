@@ -29,8 +29,8 @@ where `gitio_p23` is the name of a new folder that you want to use.
   * export the archive from TSD
   * outside TSD: extract and run `outside_push`
 
-### Optional: Having you password cached
-
+### Tip: Having your password cached
+Saves you from retyping your password when connecting by http(s).
 Add the following lines to your `~/.gitconfig`:
 ```
 [credential]
