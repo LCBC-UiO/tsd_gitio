@@ -20,7 +20,7 @@ while read tsd_repos github_repos; do
     git remote set-url origin_tsd ${tsd_repos} 2>/dev/null || git remote add origin_tsd ${tsd_repos}
     git pull ${tsd_repos} master
   )
-done < <( cat ${BASEDIR}/cfg_repos.txt | grep -v "^#")
+done < <( cat ${BASEDIR}/cfg_repos.txt | grep -v "^#" | grep ".")
 
 cd /tmp
 project=${USER%-*}
