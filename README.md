@@ -28,7 +28,15 @@ where `gitio_p23` is the name of a new folder that you want to use.
   * inside TSD: run `inside_fetch`
   * export the archive from TSD
   * outside TSD: extract and run `outside_push`
-  
+
+### Optional: Having you password cached
+
+Add the following lines to your `~/.gitconfig`:
+```
+[credential]
+	helper = cache --timeout=86400
+```
+
 ## Changing Git URLs
 
 If you want to change the location of a repository after the init.
