@@ -20,14 +20,14 @@ where `gitio_p23` is the name of a new folder that you want to use.
 
 ### Importing to TSD
 
-  * outside TSD: run `outside_fetch`
+  * outside TSD: run `./outside_fetch`
   * upload the archive to TSD
-  * inside TSD: extract and run `inside_push`
+  * inside TSD: extract and run `./inside_push`
   
 ### Exporting from TSD
-  * inside TSD: run `inside_fetch`
+  * inside TSD: run `./inside_fetch`
   * export the archive from TSD
-  * outside TSD: extract and run `outside_push`
+  * outside TSD: extract and run `./outside_push`
 
 ### Tip: Having your password cached
 Saves you from retyping your password when connecting by http(s).
