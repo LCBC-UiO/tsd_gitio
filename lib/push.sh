@@ -21,7 +21,8 @@ cd ${BASEDIR}
 for dir in $(ls -d */); do
   echo ${dir}...
   cd ${BASEDIR}/${dir}
-  # pull if master exists (skips for empty remote repos)
-  git ls-remote ${origin} | grep -q master && git pull ${origin} master || true
-  git push ${origin} master
+  # pull if default branch exists (skips for empty remote repos)
+  ref=$(git symbolic-ref refs/remotes/origin/HEAD)
+  git ls-remote ${origin} | grep -q ${ref##*/} && git pull ${origin} ${ref##*/} || true
+  git push ${origin} ${ref##*/}
 done
