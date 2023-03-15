@@ -22,6 +22,7 @@ for dir in $(ls -d */); do
   echo ${dir}...
   cd ${BASEDIR}/${dir}
   # pull if master exists (skips for empty remote repos)
-  git ls-remote ${origin} | grep -q master && git pull ${origin} master || true
-  git push ${origin} master
+  dbranch=$(git remote show ${origin} | sed -n '/HEAD branch/s/.*: //p')
+  git ls-remote ${origin} | grep -q ${dbranch} && git pull ${origin} ${dbranch} || true
+  git push ${origin} ${dbranch}
 done
