@@ -18,8 +18,8 @@ while read tsd_repos github_repos; do
     cd ${gdir}
     git remote set-url origin_github ${github_repos} 2>/dev/null || git remote add origin_github ${github_repos}
     git remote set-url origin_tsd ${tsd_repos} 2>/dev/null || git remote add origin_tsd ${tsd_repos}
-    ref=$(git symbolic-ref refs/remotes/origin/HEAD)
-    git pull ${github_repos} ${ref##*/}
+    dbranch=$(git remote show origin_tsd | sed -n '/HEAD branch/s/.*: //p')
+    git pull ${tsd_repos} ${dbranch}
   )
 done < <( cat ${BASEDIR}/cfg_repos.txt | grep -v "^#" | grep ".")
 
